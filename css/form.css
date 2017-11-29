@@ -1,0 +1,122 @@
+a
+{
+    text-decoration: none;
+}
+
+.maincontent_bar_photosession_wrapper
+{
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.photosession_header
+{
+    margin-bottom: 10px;
+}
+.maincontent_bar_photosession_form
+{
+    font-family:  Sans-Serif, Tahoma;
+    border-radius: 8px 8px 0 0;
+    background-color: #FFFFFF;
+    border-top: 5px solid rgba(150,150,150, 1);
+    border-right: 1px solid rgba(210,210,210, 1);
+    border-left: 1px solid rgba(210,210,210, 1);
+    border-bottom: 5px solid rgba(150,150,150, 1);
+    padding: 20px;
+}
+.photosession_form
+{
+    margin: 8px;
+    width: 100%;
+    position: relative;
+}
+.photosession_form div.photosession_row
+{
+    display: flex;
+    flex-direction: row;
+    margin: 3px 0;
+}
+.photosession_form div.photosession_row div.photosession_input
+{
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 2px;
+}
+.photosession_form div.photosession_row div.photosession_input:nth-child(1)
+{
+    display: table;
+    text-align: left;
+    width: 25%;
+    max-width: 400px;
+    padding: 9.5px 0;
+}
+.photosession_form div.photosession_row div.photosession_input:nth-child(3)
+{
+    padding: 4.5px 0;
+}
+
+.photosession_form div#birthday select
+{
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.photosession_form div.photosession_row ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.photosession_form div.photosession_row div:nth-child(3) img
+{
+    vertical-align: middle;
+    margin-right: 5px; 
+}
+.photosession_form form input[type="text"],
+.photosession_form form select
+{
+    font-size: 14px;
+    border: 1px solid #000000;
+    width: 100%;
+    padding: 11px 0;
+    text-indent: 8px;
+    background-color: #FFFFFF;
+}
+.photosession_form form input[type="submit"]
+{
+    border: transparent;
+    padding: 18px 50px;
+    border-radius: 5px;
+    box-shadow: 0px 7px 0px rgba(50, 50, 50, 1);
+}
+.photosession_form select#day
+{
+    margin: 0 3px;
+}
+.photosession_form form input[type="text"]:focus,
+.photosession_form form select:focus
+{
+    outline: none;
+}
+.photosession_form_submit
+{
+    margin: 5px 0px;
+}
+
+@media only screen and (min-width: 1280px)
+{
+    
+}
+@media only screen and (max-width: 1280px)
+{
+    .photosession_form div.photosession_row
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .photosession_form div.photosession_form div.photosession_input
+    {
+        flex-grow: 1;
+        flex-basis: 1;
+    }
+}

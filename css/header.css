@@ -1,0 +1,155 @@
+header.header_bar
+{
+    font-family: Sans-Serif;
+    background: url("http://headerart.weebly.com/uploads/5/7/5/7/5757212/7062921_orig.jpg") no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.header_bar_wrapper
+{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+.header_bar_logo img#header_bar_logo
+{
+    height: 100px; 
+    width: 300px;
+    margin: 20px 0;
+    vertical-align: middle;
+}
+
+.header_bar_form
+{
+    text-align: right; 
+    padding: 35px 0;
+}
+
+.header_bar_form a
+{
+    border: transparent;
+    background: #EDE9E9;
+    padding: 21px 18px;
+    border-radius: 5px;
+    box-shadow: 0px 7px 0px rgba(50, 50, 50, 1);
+}
+@media only screen and (min-width: 1280px)
+{
+    .header_bar_wrapper
+    {
+        width: 88%;
+    }
+    .header_bar_logo img#header_bar_logo
+    {
+        height: 75px; 
+        width: 225px; 
+        margin: 10px 0;
+    }
+    .header_bar_form
+    { 
+        padding: 20px 0;
+    }
+    .header_bar_form a
+    {
+        padding: 17px 15px;
+        font-size: 18px;
+    }
+
+}
+
+@media only screen and (max-width: 1280px)
+{
+    .header_bar_wrapper
+    {
+        width: 85%;
+    }
+    .header_bar_form
+    { 
+        padding: 9px 0;
+    }
+    .header_bar_form a
+    {
+        padding: 8px 8px;
+        font-size: 18px;
+    }
+    .header_bar_logo img#header_bar_logo
+    {
+        height: 45px; 
+        width: 135px; 
+        margin: 7px 0;
+    }
+}
+@media only screen and (max-width: 768px)
+{
+    .header_bar_logo
+    {
+        text-align: center;
+    }
+
+    .header_bar_wrapper
+    {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-rows: 1fr;
+    }
+}
+
+
+header.menu_bar
+{
+    font-family: Sans-serif, Verdana;
+    z-index: 2000;
+    background: rgb(243, 176, 176);
+
+}
+
+.menu_bar_wrapper
+{
+    width: 97%;
+    margin: 0 auto;
+}
+
+.menu_bar_list 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.menu_bar_list > a
+{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+
+}
+
+@media only screen and (min-width: 1280px)
+{
+    .menu_bar_wrapper
+    {
+        width: 97%;
+    }
+  
+}
+
+@media only screen and (max-width: 1280px)
+{
+  
+}
+@media only screen and (max-width: 768px)
+{
+    .menu_bar_wrapper
+    {
+        width: 100%;
+    }
+
+    .menu_bar_list 
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

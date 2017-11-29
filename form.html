@@ -1,0 +1,265 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/ico">
+  <title>Brooke's portofolio</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/form.css">
+
+</head>
+<body>
+        <header class="header_bar">
+                <div class="header_bar_wrapper">
+                    <div class="header_bar_logo">
+                        <a href="index.html">
+                            <img alt="logo picture" id="header_bar_logo" src="images/my_logo.png"/>
+                        </a>
+                    </div>
+                    <div class="header_bar_form">   
+                            <a href="form.html">Request a photo session</a>
+                    </div>
+                </div>
+            </header>
+            
+                <header class="menu_bar">
+                    <div class="menu_bar_wrapper">	
+                        <div class="menu_bar_list">
+                                       <a href="index.html">HOME</a>
+                                    <a href="photos.html">PHOTOS</a>
+                            
+                        </div>
+                    </div>
+                </header>
+
+
+     <div class="maincontent_bar">
+        <div class="maincontent_bar_photosession_wrapper">
+            <div class="maincontent_bar_photosession_form">
+                <div class="photosession_header">
+                    <p>Request a photo session</p>
+                </div>
+                <div class="photosession_form">
+                    <form name="photosessionform">
+                        <div class="photosession_row">
+                            <div class="photosession_input photosession_label">
+                                <label>E-mail address:</label>
+                            </div>
+                            <div class="photosession_input">
+                                <input name="emailaddress" type="text" placeholder="mail@address.com"/>
+                            </div>
+                        </div>
+                        <div class="photosession_row">
+                            <div class="photosession_input photosession_label">
+                                <label>First name:</label>
+                            </div>
+                            <div class="photosession_input">
+                                <input name="firstname" type="text"/>
+                            </div>
+                        </div>
+                                <div class="photosession_row">
+                                    <div class="photosession_input">
+                                        <label>Last name:</label>
+                                    </div>
+                                    <div class="photosession_input">
+                                        <input name="lastname" type="text"/>
+                                    </div>
+                                </div>
+                                <div class="photosession_row">
+                                    <div class="photosession_input">
+                                        <label>City:</label>
+                                        </div>
+                                            <div class="photosession_input">
+                                                <select name="province">
+                                                    <option value="">Select a city</option>
+                                                    <option value="Bucharest">Bucuresti</option>
+                                                    <option value="Pitesti">Pitesti</option> 
+                                                </select>
+                                            </div>
+                                </div>
+                                        <div class="photosession_row">
+                                            <div class="photosession_input">
+                                                <label>Photo session:</label>
+                                            </div>
+                                            <div class="photosession_input">
+                                                <select>
+                                                    <option value="">Month</option>
+                                                    <option value="january">January</option>
+                                                    <option value="february">February</option>
+                                                    <option value="march">March</option>
+                                                    <option value="april">April</option>
+                                                    <option value="may">May</option>
+                                                    <option value="june">June</option>
+                                                    <option value="july">July</option>
+                                                    <option value="august">August</option>
+                                                    <option value="september">September</option>
+                                                    <option value="october">October</option>
+                                                    <option value="november">November</option>
+                                                    <option value="december">December</option>
+                                                </select>
+                                                <select>
+                                                    <option value="">Day</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="photosession_row">
+                                            <div class="photosession_input">
+                                                <label>Contact number:</label>
+                                            </div>
+                                            <div class="photosession_input">
+                                                <input name="contactnumber" type="text"/>
+                                            </div>
+                                        </div>
+                                        <div class="photosession_row">
+                                            <div class="photosession_input">
+                                                <label>Choose the event</label>
+                                            </div>
+                                            <div class="photosession_input">
+                                                <ul>
+                                                    <li>
+                                                        <input name="status" value="single" type="radio" checked>
+                                                        <label>Graduation</label>
+                                                    </li>
+                                                    <li>
+                                                        <input name="status" value="married"  type="radio" >
+                                                        <label>Marriage</label>
+                                                    </li>
+                                                    <li>
+                                                        <input name="status" value="divorced" type="radio" >
+                                                        <label
+                                                        >Birth</label>
+                                                    </li>
+                                                    <li>
+                                                        <input name="status" value="dontsharestatus"  type="radio" >
+                                                        <label>Other</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div> 
+                                 <div class="photosession_form_submit">
+                                    <input type="submit" value="Confirm"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer_bar">
+                    <div class="footer_bar_main">
+                        <div class="footer_bar_main_wrapper">
+                            <div class="footer_bar_social">
+                                <p>Me around the web</p>
+                                <ul>
+                                        <li><a href="#"><img alt="fb logo" src="images/Facebook.png"></a></li>
+                                        <li><a href="#"><img alt="flick logo" src="images/Flickr.png"></a></li>
+                                        <li><a href="#"><img alt="google+ logo" src="images/Google+.png"></a></li>
+                                        <li><a href="#"><img alt="instagram logo" src="images/Instagram.png"/></a></li>
+                                        <li><a href="#"><img alt="pinterest logo" src="images/Pinterest.png"/></a></li>
+                                        <li><a href="#"><img alt="tumblr logo" src="images/Tumblr.png"/></a></li>
+                                        <li><a href="#"><img alt="twitter logo" src="images/Twitter.png"/></a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_bar_details">
+                                <div class="footer_bar_subdetails">
+                                    <div class="footer_bar_subdetails_header">
+                                        <p>Quick Links</p>
+                                    </div>
+                                    <div class="footer_bar_subdetails_list">
+                                        <ul>
+                                            <li><a href="about_me.html">About me</a></li>
+                                            <li><a href="donate.html">Donate</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="footer_bar_subdetails">
+                                    <div class="footer_bar_subdetails_header">
+                                        <p>Contact me</p>
+                                    </div>
+                                    <div class="footer_bar_subdetails_list">
+                                        <table>
+                                            <tbody>
+                                                <tr>										
+                                                    <td>
+                                                        <span>brookedavis@gmail.com</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>	
+                                                    <td>
+                                                        <span>0749557845</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="footer_bar_subdetails">
+                                    <div class="footer_bar_subdetails_header">
+                                        <p>Updates</p>
+                                    </div>
+                                    <div class="footer_bar_subdetails_list">
+                                        <div class="footer_bar_form">
+                                            <form>
+                                                <ul>
+                                                    <li>
+                                                        <p>Receive photos in your inbox</p>
+                                                        <input type="text" id="email" name="email" placeholder="Enter Email"/>
+                                                    </li>
+                                                    <li>
+                                                        <input type="submit" value="Subscribe"/>
+                                                    </li>
+                                                </ul>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer_bar_extend">
+                        <div class="footer_bar_extend_wrapper">
+                            <div class="footer_bar_extend_copyright">
+                                <p>© 2017 Brooke Davis. All Rights Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+</body>
+</html>
