@@ -43,6 +43,8 @@ function verifyForm(){
 
     var number = verifyNumber();
 
+    console.log(em + ''+ fn +''+ ln +''+ city +''+ month  +''+ day +''+ number);
+
     if(em == true && fn == true && ln == true && city == true && month == true && day == true && number == true)
         loadMessage();
 }
@@ -125,10 +127,10 @@ function verifyNumber(){
         text = 'You have to enter telephone number!';
         if(divExists(id))
             if(getText(id) == text)
-                return;
+                return false;
             else if(getText(id) != text){
                 modifyDiv(id, text);
-                return;
+                return false;
             }
             createDiv(id, text, fatherElem);
     }
@@ -136,15 +138,17 @@ function verifyNumber(){
         text = 'You have to enter a valid telephone number!';
         if(divExists(id))
             if(getText(id) == text)
-                return;
+                return false;
             else if(getText(id) != text){
                 modifyDiv(id, text);
-                return;
+                return false;
             }
         createDiv(id, text, fatherElem);
+        return false;
     }
     else {
         deleteNode(id);
+        return true;
     }
 }
 
