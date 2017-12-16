@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/form.css">
+  <script type="text/javascript" src="js/form.js"></script>
 
 </head>
 <body>
@@ -47,48 +48,48 @@
                 </div>
                 <div class="photosession_form">
                     <form name="photosessionform">
-                        <div class="photosession_row">
-                            <div class="photosession_input photosession_label">
+                        <div id="email-row" class="photosession_row">
+                            <div id="email" class="photosession_input photosession_label">
                                 <label>E-mail address:</label>
                             </div>
                             <div class="photosession_input">
-                                <input name="emailaddress" type="text" placeholder="mail@address.com"/>
+                                <input id="emailaddress" name="emailaddress" type="text" placeholder="mail@address.com"/>
                             </div>
                         </div>
-                        <div class="photosession_row">
+                        <div id="firstname-row" class="photosession_row">
                             <div class="photosession_input photosession_label">
                                 <label>First name:</label>
                             </div>
                             <div class="photosession_input">
-                                <input name="firstname" type="text"/>
+                                <input id="firstname" name="firstname" type="text"/>
                             </div>
                         </div>
-                                <div class="photosession_row">
+                                <div id="lastname-row" class="photosession_row">
                                     <div class="photosession_input">
                                         <label>Last name:</label>
                                     </div>
                                     <div class="photosession_input">
-                                        <input name="lastname" type="text"/>
+                                        <input id="lastname" name="lastname" type="text"/>
                                     </div>
                                 </div>
-                                <div class="photosession_row">
+                                <div id="city-row" class="photosession_row">
                                     <div class="photosession_input">
                                         <label>City:</label>
                                         </div>
                                             <div class="photosession_input">
-                                                <select name="province">
+                                                <select id="city" name="province">
                                                     <option value="">Select a city</option>
                                                     <option value="Bucharest">Bucuresti</option>
                                                     <option value="Pitesti">Pitesti</option> 
                                                 </select>
                                             </div>
                                 </div>
-                                        <div class="photosession_row">
+                                        <div id="date-row" class="photosession_row">
                                             <div class="photosession_input">
                                                 <label>Photo session:</label>
                                             </div>
                                             <div class="photosession_input">
-                                                <select>
+                                                <select id="month">
                                                     <option value="">Month</option>
                                                     <option value="january">January</option>
                                                     <option value="february">February</option>
@@ -103,7 +104,7 @@
                                                     <option value="november">November</option>
                                                     <option value="december">December</option>
                                                 </select>
-                                                <select>
+                                                <select id="day">
                                                     <option value="">Day</option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
@@ -139,12 +140,12 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="photosession_row">
+                                        <div id="telephone-row" class="photosession_row">
                                             <div class="photosession_input">
                                                 <label>Contact number:</label>
                                             </div>
                                             <div class="photosession_input">
-                                                <input name="contactnumber" type="text"/>
+                                                <input id="contactnumber" name="contactnumber" type="text"/>
                                             </div>
                                         </div>
                                         <div class="photosession_row">
@@ -163,8 +164,7 @@
                                                     </li>
                                                     <li>
                                                         <input name="status" value="divorced" type="radio" >
-                                                        <label
-                                                        >Birth</label>
+                                                        <label>Birth</label>
                                                     </li>
                                                     <li>
                                                         <input name="status" value="dontsharestatus"  type="radio" >
@@ -174,9 +174,10 @@
                                             </div>
                                         </div> 
                                  <div class="photosession_form_submit">
-                                    <input type="submit" value="Confirm"/>
+                                    <button id="submit-button" type="button" class="submit-button" onclick="verifyForm()">Confirm</button>
                                 </div>
                             </form>
+                            <p id="message" class="message"></p>
                         </div>
                     </div>
                 </div>
