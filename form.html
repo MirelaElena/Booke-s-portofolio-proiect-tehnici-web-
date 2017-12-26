@@ -155,29 +155,43 @@
                                             <div class="photosession_input">
                                                 <ul>
                                                     <li>
-                                                        <input name="status" value="single" type="radio" checked>
+                                                        <input name="status" id="graduation" type="radio" checked>
                                                         <label>Graduation</label>
                                                     </li>
                                                     <li>
-                                                        <input name="status" value="married"  type="radio" >
+                                                        <input name="status" id="marriage"  type="radio" >
                                                         <label>Marriage</label>
                                                     </li>
                                                     <li>
-                                                        <input name="status" value="divorced" type="radio" >
+                                                        <input name="status" id="birth" type="radio" >
                                                         <label>Birth</label>
                                                     </li>
                                                     <li>
-                                                        <input name="status" value="dontsharestatus"  type="radio" >
+                                                        <input name="status" id="other"  type="radio" >
                                                         <label>Other</label>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div> 
+                                        <div id="new-row" class="photosession_row">
+                                            <div class="photosession_input">
+                                                <label>Appointment:</label>
+                                            </div>
+                                            <div class="photosession_input">
+                                                <select id="appointmentOption">
+                                                    <option value="New">New</option>
+                                                    <option value="Modify last appointment.">Modify last appointment.</option>
+                                                    <option value="Delete last appointment.">Delete last appointment.</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
                                  <div class="photosession_form_submit">
                                     <button id="submit-button" type="button" class="submit-button" onclick="verifyForm()">Confirm</button>
                                 </div>
                             </form>
-                            <p id="message" class="message"></p>
+                        </br></br>
+                            <p id="lista" class="message"> Your appointments: </p>
                         </div>
                     </div>
                 </div>

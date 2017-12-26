@@ -46,7 +46,12 @@ function verifyForm(){
     console.log(em + ''+ fn +''+ ln +''+ city +''+ month  +''+ day +''+ number);
 
     if(em == true && fn == true && ln == true && city == true && month == true && day == true && number == true)
-        loadMessage();
+        if(document.getElementById('appointmentOption').value == 'New')
+            saveAppointment();
+        else if (document.getElementById('appointmentOption').value == 'Modify last appointment.')
+            modifyLastAppointment();
+        else if (document.getElementById('appointmentOption').value == 'Delete last appointment.')
+            deleteLastAppointment();
 }
 
 function verifySelect(input, id, fatherElem, elem, defaultValue){
@@ -152,13 +157,132 @@ function verifyNumber(){
     }
 }
 
-function loadMessage() {
+// Ajax
+// Get
+appId=1;
+
+function getAppointments() {
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("message").innerHTML = this.responseText;
-      }
-    };
-    xhttp.open("GET", "getMessage.txt", true);
+    var url = "http://localhost:3000/appointments";
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            dogs = JSON.parse(this.responseText);
+            showAppointments(dogs);
+        }
+    }
+    xhttp.open("GET", url, true);
     xhttp.send();
-  }
+}
+
+function showAppointments(appointments) {
+
+    appointments.forEach(function (appointment) {
+
+        var ul = document.createElement('ul');
+        ul.setAttribute('id', 'Details of appointment ' + appointment.id);
+        document.getElementById('lista').appendChild(ul); 
+
+        for (property in appointment) {
+            var li = document.createElement('li');
+            li.appendChild(document.createTextNode(appointment[property]));
+            li.setAttribute('id', property);
+            if(property == 'id')
+                appId = appointment[property];
+            ul.appendChild(li);
+        }
+
+    })
+}
+
+ getAppointments();
+
+//post
+function saveAppointment() {
+    var appointment = {};
+    appointment.id = appId+1;
+    appointment.email = document.getElementById('emailaddress').value;
+    appointment.firstname = document.getElementById('firstname').value;
+    appointment.lastname = document.getElementById('lastname').value;
+    appointment.city = document.getElementById('city').value;
+    appointment.month = document.getElementById('month').value;
+    appointment.day = document.getElementById('day').value;
+    appointment.contactnumber = document.getElementById('contactnumber').value;
+    if(document.getElementById('graduation').checked == true)
+        appointment.event = 'graduation';
+    else if(document.getElementById('marriage').checked == true)
+        appointment.event = 'marriage';
+    else if(document.getElementById('birth').checked == true)
+        appointment.event = 'birth';
+    else appointment.event = 'other';
+
+    var json = JSON.stringify(appointment);
+
+    var url = "http://localhost:3000/appointments";
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    xhr.onload = function () {
+        var appointments = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "201") {
+            console.table(appointments);
+        } else {
+            console.error(appointments);
+        }
+    }
+    xhr.send(json);
+}
+
+//put
+function modifyLastAppointment() {
+
+    var appointment = {};
+    appointment.id = appId;
+    appointment.email = document.getElementById('emailaddress').value;
+    appointment.firstname = document.getElementById('firstname').value;
+    appointment.lastname = document.getElementById('lastname').value;
+    appointment.city = document.getElementById('city').value;
+    appointment.month = document.getElementById('month').value;
+    appointment.day = document.getElementById('day').value;
+    appointment.contactnumber = document.getElementById('contactnumber').value;
+    if(document.getElementById('graduation').checked == true)
+        appointment.event = 'graduation';
+    else if(document.getElementById('marriage').checked == true)
+        appointment.event = 'marriage';
+    else if(document.getElementById('birth').checked == true)
+        appointment.event = 'birth';
+    else appointment.event = 'other';
+
+    var json = JSON.stringify(appointment);
+    var url = "http://localhost:3000/appointments";
+    var xhr = new XMLHttpRequest();
+    console.log(appId);
+    xhr.open("PUT", url+'/' + appId, true);
+    xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+    xhr.onload = function () {
+        var appointment = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(appointment);
+        } else {
+            console.error(appointment);
+        }
+    }
+    xhr.send(json);
+}
+
+//delete
+function deleteLastAppointment(number) {
+    var url = "http://localhost:3000/appointments";
+
+    var xhr = new XMLHttpRequest();
+    console.log(appId);
+    xhr.open("DELETE", url + '/' + appId, true);
+    xhr.onload = function () {
+        var appointments = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(appointments);
+        } else {
+            console.error(appointments);
+        }
+    }
+    xhr.send(null);
+}

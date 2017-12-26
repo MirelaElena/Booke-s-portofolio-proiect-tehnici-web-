@@ -1,0 +1,26 @@
+{
+  "appointments": [
+    {
+      "id": 1,
+      "email": "ddasadsdsad",
+      "firstname": "modifyyymodifyyy",
+      "lastname": "modifyyymodifyyy",
+      "city": "Pitesti",
+      "month": "june",
+      "day": "5",
+      "contactnumber": "1234567880",
+      "event": "graduation"
+    },
+    {
+      "id": 2,
+      "email": "aaaaaaaaaaa",
+      "firstname": "modifyyymodifyyy",
+      "lastname": "modifyyymodifyyy",
+      "city": "Bucharest",
+      "month": "june",
+      "day": "5",
+      "contactnumber": "1234567880",
+      "event": "graduation"
+    }
+  ]
+}
