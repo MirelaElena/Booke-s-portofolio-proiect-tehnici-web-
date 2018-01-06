@@ -50,7 +50,8 @@ function verifyForm(){
             saveAppointment();
         else if (document.getElementById('appointmentOption').value == 'Modify last appointment.')
             modifyLastAppointment();
-        else if (document.getElementById('appointmentOption').value == 'Delete last appointment.')
+    
+    if (document.getElementById('appointmentOption').value == 'Delete last appointment.')
             deleteLastAppointment();
 }
 
